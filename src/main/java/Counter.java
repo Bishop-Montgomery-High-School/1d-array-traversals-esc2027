@@ -2,7 +2,7 @@ public class Counter {
 
     /**
      * Returns the number of elements strictly greater than the given threshold.
-     *
+     *a
      * Traversal strategy: initialize a counter to 0, then loop through
      * the array and increment the counter each time an element satisfies
      * the condition. An enhanced for loop works well here.

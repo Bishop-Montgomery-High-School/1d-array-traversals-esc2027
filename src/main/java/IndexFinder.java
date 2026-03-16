@@ -40,7 +40,7 @@ public class IndexFinder {
      * Returns the index of the largest value in the array.
      * If the maximum value appears more than once, return the index
      * of its FIRST occurrence.
-     *
+     *a
      * Traversal strategy: same pattern as indexOfMin(), but update
      * when you find a strictly larger value.
      *

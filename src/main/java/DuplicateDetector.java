@@ -3,7 +3,7 @@ public class DuplicateDetector {
     /**
      * Returns true if any two elements in the array are equal to each other,
      * false if all elements are distinct.
-     *
+     *a
      * Traversal strategy: use a NESTED loop. The outer loop picks a candidate
      * at index i. The inner loop compares it against every element at index
      * j, where j starts at i + 1. This avoids comparing an element to itself
