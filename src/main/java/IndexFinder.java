@@ -23,7 +23,17 @@ public class IndexFinder {
         //       if arr[i] is strictly less than arr[your tracked index], update your tracked index
 
         // TODO: return the tracked index
-        return 0; // placeholder
+        int minIndex = 0;
+        int arrMin = 0;
+
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > arrMin) {
+                arrMin = arr[i];
+                minIndex = i;
+            }
+        }
+
+        return minIndex; // placeholder
     }
 
     /**
@@ -49,8 +59,15 @@ public class IndexFinder {
         // TODO: return the tracked index
 
         int maxIndex = 0;
+        int arrMax = 0;
 
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > arrMax) {
+                arrMax = arr[i];
+                maxIndex = i;
+            }
+        }
 
-        return 0; // placeholder
+        return maxIndex; // placeholder
     }
 }
