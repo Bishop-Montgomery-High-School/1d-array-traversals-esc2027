@@ -47,6 +47,10 @@ public class IndexFinder {
         //       if arr[i] is strictly greater than arr[your tracked index], update your tracked index
 
         // TODO: return the tracked index
+
+        int maxIndex = 0;
+
+
         return 0; // placeholder
     }
 }
