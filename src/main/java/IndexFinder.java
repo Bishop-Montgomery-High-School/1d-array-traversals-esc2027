@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class IndexFinder {
 
     /**
@@ -24,10 +26,10 @@ public class IndexFinder {
 
         // TODO: return the tracked index
         int minIndex = 0;
-        int arrMin = 0;
+        int arrMin = arr[0];
 
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] > arrMin) {
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] < arrMin) {
                 arrMin = arr[i];
                 minIndex = i;
             }

@@ -23,7 +23,14 @@ public class PropertyChecker {
         //       if the element is greater than 0, set the flag to true
 
         // TODO: return the flag
-        return false; // placeholder
+        boolean hasPositive = false;
+
+        for(int i : arr) {
+            if(i > 0) hasPositive = true;
+        }
+
+
+        return hasPositive; // placeholder
     }
 
     /**
@@ -49,6 +56,12 @@ public class PropertyChecker {
         //       if the element is NOT greater than 0, set the flag to false
 
         // TODO: return the flag
-        return false; // placeholder
+        boolean allPositive = true;
+
+        for(int i : arr) {
+            if(i <= 0) allPositive = false;
+        }
+
+        return allPositive; // placeholder
     }
 }

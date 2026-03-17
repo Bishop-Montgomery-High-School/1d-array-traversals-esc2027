@@ -21,6 +21,11 @@ public class Shifter {
         //       assign arr[i + 1] to arr[i]
 
         // TODO: set arr[arr.length - 1] to 0
+
+        for(int i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i+1];
+        }
+        arr[arr.length - 1] = 0;
     }
 
     /**
@@ -47,5 +52,10 @@ public class Shifter {
         //       assign arr[i - 1] to arr[i]
 
         // TODO: set arr[0] to 0
+
+        for(int i = arr.length - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[0] = 0;
     }
 }

@@ -19,7 +19,12 @@ public class SumAverage {
         // TODO: loop through arr, adding each element to the accumulator
 
         // TODO: return the accumulator
-        return 0; // placeholder
+        int total = 0;
+
+        for(int i : arr) {
+            total += i;
+        }
+        return total; // placeholder
     }
 
     /**
@@ -43,6 +48,7 @@ public class SumAverage {
         // TODO: divide the sum by arr.length (integer division — no cast needed)
 
         // TODO: return the result
-        return 0; // placeholder
+
+        return sum(arr) / arr.length; // placeholder
     }
 }

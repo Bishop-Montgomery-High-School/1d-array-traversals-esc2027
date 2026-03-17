@@ -33,5 +33,16 @@ public class Reverser {
         //     - copy the temporary variable into arr[right]
         //     - increment left
         //     - decrement right
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right) {
+            int tempLeft = arr[left];
+            arr[left] = arr[right];
+            arr[right] = tempLeft;
+            left++;
+            right--;
+        }
     }
 }
