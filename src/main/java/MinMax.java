@@ -20,7 +20,13 @@ public class MinMax {
         //       if arr[i] is less than your tracking variable, update it
 
         // TODO: return the tracking variable
-        return 0; // placeholder
+        int tracker = arr[0];
+
+        for(int i = 1; i < arr.length; i++) {
+            if (arr[i] < tracker) tracker = arr[i];
+        }
+
+        return tracker; // placeholder
     }
 
     /**
@@ -42,6 +48,12 @@ public class MinMax {
         //       if arr[i] is greater than your tracking variable, update it
 
         // TODO: return the tracking variable
-        return 0; // placeholder
+        int tracker = arr[0];
+
+        for(int i = 1; i < arr.length; i++) {
+            if (arr[i] > tracker) tracker = arr[i];
+        }
+
+        return tracker; // placeholder
     }
 }

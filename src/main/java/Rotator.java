@@ -23,6 +23,14 @@ public class Rotator {
         //       assign arr[i + 1] to arr[i]
 
         // TODO: place the saved value at arr[arr.length - 1]
+        int temp = arr[0];
+
+        for(int i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i+1];
+        }
+        arr[arr.length - 1] = 0;
+
+        arr[arr.length - 1] = temp;
     }
 
     /**
@@ -52,5 +60,14 @@ public class Rotator {
         //       assign arr[i - 1] to arr[i]
 
         // TODO: place the saved value at arr[0]
+
+        int temp = arr[arr.length - 1];
+
+        for(int i = arr.length - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[0] = 0;
+
+        arr[0] = temp;
     }
 }

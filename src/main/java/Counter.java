@@ -2,7 +2,7 @@ public class Counter {
 
     /**
      * Returns the number of elements strictly greater than the given threshold.
-     *
+     *a
      * Traversal strategy: initialize a counter to 0, then loop through
      * the array and increment the counter each time an element satisfies
      * the condition. An enhanced for loop works well here.
@@ -15,12 +15,14 @@ public class Counter {
      */
     public int countAbove(int[] arr, int threshold) {
         // TODO: initialize a counter to 0
-
+        int counter = 0;
         // TODO: loop through arr
         //       if the element is strictly greater than threshold, increment the counter
-
+        for(int i : arr) {
+            if(i > threshold) counter++;
+        }
         // TODO: return the counter
-        return 0; // placeholder
+        return counter; // placeholder
     }
 
     /**
@@ -37,12 +39,14 @@ public class Counter {
      */
     public int countBelow(int[] arr, int threshold) {
         // TODO: initialize a counter to 0
-
+        int counter = 0;
         // TODO: loop through arr
         //       if the element is strictly less than threshold, increment the counter
-
+        for(int i : arr) {
+            if (i < threshold) counter++;
+        }
         // TODO: return the counter
-        return 0; // placeholder
+        return counter; // placeholder
     }
 
     /**
@@ -59,11 +63,13 @@ public class Counter {
      */
     public int countEqual(int[] arr, int target) {
         // TODO: initialize a counter to 0
-
+        int counter = 0;
         // TODO: loop through arr
         //       if the element equals target, increment the counter
-
+        for(int i : arr) {
+            if(i == target) counter++;
+        }
         // TODO: return the counter
-        return 0; // placeholder
+        return counter; // placeholder
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class IndexFinder {
 
     /**
@@ -23,14 +25,24 @@ public class IndexFinder {
         //       if arr[i] is strictly less than arr[your tracked index], update your tracked index
 
         // TODO: return the tracked index
-        return 0; // placeholder
+        int minIndex = 0;
+        int arrMin = arr[0];
+
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] < arrMin) {
+                arrMin = arr[i];
+                minIndex = i;
+            }
+        }
+
+        return minIndex; // placeholder
     }
 
     /**
      * Returns the index of the largest value in the array.
      * If the maximum value appears more than once, return the index
      * of its FIRST occurrence.
-     *
+     *a
      * Traversal strategy: same pattern as indexOfMin(), but update
      * when you find a strictly larger value.
      *
@@ -47,6 +59,17 @@ public class IndexFinder {
         //       if arr[i] is strictly greater than arr[your tracked index], update your tracked index
 
         // TODO: return the tracked index
-        return 0; // placeholder
+
+        int maxIndex = 0;
+        int arrMax = 0;
+
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > arrMax) {
+                arrMax = arr[i];
+                maxIndex = i;
+            }
+        }
+
+        return maxIndex; // placeholder
     }
 }
