@@ -13,16 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
-    - name: Set up Java 8
-      uses: actions/setup-java@v4
-      with:
-        java-version: '8'
-        distribution: 'temurin'
-
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
-
     - name: MinMax — min()
       id: minmax-min
       uses: classroom-resources/autograding-command-grader@v1
@@ -32,7 +22,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.minMax_min_basicCases"
         timeout: 10
         max-score: 1
-
     - name: MinMax — max()
       id: minmax-max
       uses: classroom-resources/autograding-command-grader@v1
@@ -42,7 +31,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.minMax_max_basicCases"
         timeout: 10
         max-score: 1
-
     - name: IndexFinder — indexOfMin()
       id: indexfinder-indexofmin
       uses: classroom-resources/autograding-command-grader@v1
@@ -52,7 +40,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.indexFinder_indexOfMin_basicCases"
         timeout: 10
         max-score: 1
-
     - name: IndexFinder — indexOfMax()
       id: indexfinder-indexofmax
       uses: classroom-resources/autograding-command-grader@v1
@@ -62,7 +49,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.indexFinder_indexOfMax_basicCases"
         timeout: 10
         max-score: 1
-
     - name: SumAverage — sum()
       id: sumaverage-sum
       uses: classroom-resources/autograding-command-grader@v1
@@ -72,7 +58,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.sumAverage_sum_basicCases"
         timeout: 10
         max-score: 1
-
     - name: SumAverage — average()
       id: sumaverage-average
       uses: classroom-resources/autograding-command-grader@v1
@@ -81,8 +66,6 @@ jobs:
         setup-command: ''
         command: "./gradlew test --tests ArrayTraversalsTest.sumAverage_average_basicCases"
         timeout: 10
-        max-score: 1
-
     - name: Counter — countAbove()
       id: counter-countabove
       uses: classroom-resources/autograding-command-grader@v1
@@ -92,7 +75,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.counter_countAbove_basicCases"
         timeout: 10
         max-score: 1
-
     - name: Counter — countBelow()
       id: counter-countbelow
       uses: classroom-resources/autograding-command-grader@v1
@@ -101,8 +83,6 @@ jobs:
         setup-command: ''
         command: "./gradlew test --tests ArrayTraversalsTest.counter_countBelow_basicCases"
         timeout: 10
-        max-score: 1
-
     - name: Counter — countEqual()
       id: counter-countequal
       uses: classroom-resources/autograding-command-grader@v1
@@ -112,7 +92,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.counter_countEqual_basicCases"
         timeout: 10
         max-score: 1
-
     - name: PropertyChecker — hasPositive()
       id: propertychecker-haspositive
       uses: classroom-resources/autograding-command-grader@v1
@@ -122,7 +101,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.propertyChecker_hasPositive_basicCases"
         timeout: 10
         max-score: 1
-
     - name: PropertyChecker — allPositive()
       id: propertychecker-allpositive
       uses: classroom-resources/autograding-command-grader@v1
@@ -132,7 +110,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.propertyChecker_allPositive_basicCases"
         timeout: 10
         max-score: 1
-
     - name: DuplicateDetector — hasDuplicate()
       id: duplicatedetector-hasduplicate
       uses: classroom-resources/autograding-command-grader@v1
@@ -142,7 +119,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.duplicateDetector_hasDuplicate_basicCases"
         timeout: 10
         max-score: 2
-
     - name: Shifter — shiftLeft()
       id: shifter-shiftleft
       uses: classroom-resources/autograding-command-grader@v1
@@ -151,8 +127,7 @@ jobs:
         setup-command: ''
         command: "./gradlew test --tests ArrayTraversalsTest.shifter_shiftLeft_basicCases"
         timeout: 10
-        max-score: 1
-
+        max-score: 2
     - name: Shifter — shiftRight()
       id: shifter-shiftright
       uses: classroom-resources/autograding-command-grader@v1
@@ -161,8 +136,7 @@ jobs:
         setup-command: ''
         command: "./gradlew test --tests ArrayTraversalsTest.shifter_shiftRight_basicCases"
         timeout: 10
-        max-score: 1
-
+        max-score: 2
     - name: Rotator — rotateLeft()
       id: rotator-rotateleft
       uses: classroom-resources/autograding-command-grader@v1
@@ -172,7 +146,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.rotator_rotateLeft_basicCases"
         timeout: 10
         max-score: 2
-
     - name: Rotator — rotateRight()
       id: rotator-rotateright
       uses: classroom-resources/autograding-command-grader@v1
@@ -181,8 +154,7 @@ jobs:
         setup-command: ''
         command: "./gradlew test --tests ArrayTraversalsTest.rotator_rotateRight_basicCases"
         timeout: 10
-        max-score: 1
-
+        max-score: 2
     - name: Reverser — reverse()
       id: reverser-reverse
       uses: classroom-resources/autograding-command-grader@v1
@@ -192,7 +164,6 @@ jobs:
         command: "./gradlew test --tests ArrayTraversalsTest.reverser_reverse_basicCases"
         timeout: 10
         max-score: 2
-
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
